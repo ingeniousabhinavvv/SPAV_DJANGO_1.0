@@ -1,3 +1,85 @@
+<div class="container ">
+    <div class="row">
+        <h5>Goi Initiative</h5>
+        {% for goiinit in goiInitative %}
+        <div class="col-auto">
+            <div class="card shadow-sm">
+            <a href="{{goiinit.goiinitUrl}}" target="_blank"><img src="{{goiinit.goiLogo.url}}" class="card-img" alt="{{goiinit.goiLogoalt}}" width="100px" height="50px"></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<footer>
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">{% load static %}
+                        <a href="..."><img class="card-img" src="{% static 'assets/spav_logo_main.jpg' %}" alt="SPAV Logo"></a></div>
+                    <div class="card-body">
+                        
+                        <h6>Address</h6>
+                        <address>
+                            School of Planning and Architecture, Vijayawada.
+                            Survey No.4/4, ITI Road,Vijayawada-520008,
+                            Andhra Pradesh, India. <br>
+                            Phone: 08662469449 <br>
+                            Telefax: 08662469451
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">Institute</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="..">Authorities</a></li>
+                            <li><a href="..">Rankings</a></li>
+                            <li><a href="..">Office Orders</a></li>
+                            <li><a href="..">Committees</a></li>
+                            <li><a href="..">Administration</a></li>
+                            <li><a href="..">Annual Reports</a></li>
+                            <li><a href="..">MoU's</a></li>
+                            <li><a href="..">Downloads</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">Academics</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="..">Admissions</a></li>
+                            <li><a href="..">Course Offered</a></li>
+                            <li><a href="..">Academic Calendar</a></li>
+                            <li><a href="..">Examination</a></li>
+                            <li><a href="..">Results</a></li>
+                            <li><a href="..">Results</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">Students Corner</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="..">Subtitle</a></li>
+                            <li><a href="..">Subtitle</a></li>
+                            <li><a href="..">Subtitle</a></li>
+                            <li><a href="..">Subtitle</a></li>
+                            <li><a href="..">Subtitle</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>

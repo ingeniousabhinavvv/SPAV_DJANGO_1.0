@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+{% load static %}
+<br>
+    <div class="container">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info"><h4 class="text-center">Noticeboard</h4></div>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    {% for notice in noticeData %}
+                      <tr>
+                        <th scope="row"><img src="{% static 'assets/newss.gif' %}" alt="News"><a href="{{notice.noticeFile.url}}">{{notice.noticeTitle}}</a></th>
+                        <td>{{notice.noticeTime}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+<br>
+{% include 'footer.html' %}

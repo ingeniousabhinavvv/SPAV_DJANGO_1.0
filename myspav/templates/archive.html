@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+    <div class="container">
+        {% for ap in posts %}
+        <div class="card w-75">
+            <div class="card-body">
+              <h5 class="card-title">{{ap.title}}</h5>
+              <p class="card-text">{{ap.description}}</p>
+              <a href="{% url 'archive_post' p.id %}" class="btn btn-primary">Archive</a>
+            </div>
+        </div>
+        {% endfor  %}
+    </div>
+{% include 'footer.html' %}
