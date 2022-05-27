@@ -37,3 +37,11 @@ def faculty(request):
 
 def noticeboard(request):
     return render(request, 'noticeboard.html', context)
+
+
+def about(request):
+    return render(request, 'about.html', context)
+
+
+def academics(request):
+    return render(request, 'academics.html', context)

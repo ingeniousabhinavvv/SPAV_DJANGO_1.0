@@ -46,31 +46,31 @@
         <div class="row g-2">
             <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-header"><i class="bi bi-mortarboard-fill"></i>Admissions</div>
+                    <div class="card-header"><i class="bi bi-mortarboard-fill"></i>&nbsp;Admissions</div>
                     <div class="card-body">
-                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img" src="{% static 'assets/Direct Admissions 2022-23.png' %}" alt="My image"></a>
+                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img hover" src="{% static 'assets/Direct Admissions 2022-23.png' %}" alt="My image"></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-header"><i class="bi bi-collection-play-fill"></i>Upcoming Lectures</div>
+                    <div class="card-header"><i class="bi bi-collection-play-fill"></i>&nbsp;Upcoming Lectures</div>
                     <div class="card-body">
-                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img" src="{% static 'assets/upcoming_lect.png' %}" alt="My image"></a>
+                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img hover" src="{% static 'assets/upcoming_lect.png' %}" alt="My image"></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-header"><i class="bi bi-file-arrow-down-fill"></i>SPAV Forms</div>
+                    <div class="card-header"><i class="bi bi-file-arrow-down-fill"></i>&nbsp;SPAV Forms</div>
                     <div class="card-body">
-                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img" src="{% static 'assets/spavform.jpg' %}" alt="My image"></a>
+                        <a href="https://www.spav.ac.in/spavadmissions.html" target="_blank"><img class="card-img hover" src="{% static 'assets/spavform.jpg' %}" alt="My image"></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-header"><i class="bi bi-newspaper"></i>Activities & News Letter</div>
+                    <div class="card-header"><i class="bi bi-newspaper"></i>&nbsp;Activities & News Letter</div>
                     <div class="card-body">
                         <h6>Department Of Architecture</h6>
                         <ul>
@@ -110,7 +110,7 @@
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-latestnews" role="tabpanel" aria-labelledby="nav-latestnews-tab" tabindex="0">
-                        
+                        Latest News
                     </div>
                     <div class="tab-pane fade" id="nav-tender" role="tabpanel" aria-labelledby="nav-tender-tab" tabindex="0">...</div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
@@ -128,6 +128,7 @@
     </div>
 </section>
 
+<!-- glimpse of students work start -->
 <section>
     <div class="container">
         <h3 class="text-center bg-info p-2">GLIMPSE OF STUDENTS WORK</h3>
@@ -135,7 +136,7 @@
             {% for sw in studentsWork %}
             <div class="col-sm-2">
                 <div class="card shadow-sm">
-                    <img src="{{sw.studentworksImage.url}}" alt="{{sw.altText}}" class="card-img">
+                    <img src="{{sw.studentworksImage.url}}" alt="{{sw.altText}}" class="card-img hover">
                 </div>
             </div>
             {% endfor %}
@@ -146,5 +147,6 @@
         </div>
     </div>
 </section>
+<!-- glimpse of students work end-->
 <br>
 {% include 'footer.html' %}
