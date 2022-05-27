@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+<div class="container p-4">
+    <div class="card shadow-sm">
+        <div class="card-header">Downloads</div>
+        <div class="card-body">
+            <ul>
+                {% for d in downloadsData %}
+                <li><a href="{{d.downloadsFile.url}}">{{d.downloadsTitle}}</a></li>
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

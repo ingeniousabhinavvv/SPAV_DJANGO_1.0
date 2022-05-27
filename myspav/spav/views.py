@@ -1,8 +1,9 @@
 import imp
 from multiprocessing import context
+from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
-from .models import carousel, flashNews, GoiInitiative, Studentworks, Faculty, Noticeboard
+from .models import carousel, flashNews, GoiInitiative, Studentworks, Faculty, Noticeboard, Tender, Downloads
 
 
 # Create your views here.
@@ -12,7 +13,9 @@ carouselImages = carousel.objects.all()
 flashnewss = flashNews.objects.all()
 goiInitative = GoiInitiative.objects.all()
 studentsWork = Studentworks.objects.all()
-noticeData = Noticeboard.objects.all()
+tenderData = Noticeboard.objects.all()
+noticeData = Tender.objects.all()
+downloadsData = Downloads.objects.all()
 current_datetime = datetime.now()
 
 context = {
@@ -24,6 +27,8 @@ context = {
     'current_datetime': current_datetime,
     'facultyDetails': facultyDetails,
     'noticeData': noticeData,
+    'tenderData': tenderData,
+    'downloadsData': downloadsData,
 }
 
 
@@ -45,3 +50,13 @@ def about(request):
 
 def academics(request):
     return render(request, 'academics.html', context)
+
+
+def downloads(request):
+    return render(request, 'downloads.html', context)
+
+
+#==========search functionality==========#
+def search(request):
+    return HttpResponse('Your Search Result')
+#==========search functionality==========#

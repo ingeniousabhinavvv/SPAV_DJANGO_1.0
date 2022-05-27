@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 # Create your models here.
@@ -59,23 +60,20 @@ class Noticeboard(models.Model):
     def __str__(self):
         return self.noticeTitle
 
-#==========for archive system ==========#
 
-
-class BasePostModel(models.Model):
-    class Meta:
-        abstract = True
-
-    title = models.CharField(max_length=255)
-    description = models.TextField()
+class Tender(models.Model):
+    tenderTitle = models.CharField(max_length=255)
+    tenderFile = models.FileField(upload_to='tender')
+    tenderLastDate = models.DateTimeField(datetime)
 
     def __str__(self):
-        return self.title
+        return self.tenderTitle
 
 
-class Post(BasePostModel):
-    pass
+class Downloads(models.Model):
+    downloadsTitle = models.CharField(max_length=255)
+    downloadsFile = models.FileField(upload_to='downloads')
 
-
-class PostArchive(BasePostModel):
-    pass
+    def __str__(self):
+        return self.downloadsTitle
+#==========for archive system ==========#
