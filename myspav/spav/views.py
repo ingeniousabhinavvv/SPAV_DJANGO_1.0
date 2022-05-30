@@ -13,8 +13,8 @@ carouselImages = carousel.objects.all()
 flashnewss = flashNews.objects.all()
 goiInitative = GoiInitiative.objects.all()
 studentsWork = Studentworks.objects.all()
-tenderData = Noticeboard.objects.all()
-noticeData = Tender.objects.all()
+tenderData = Tender.objects.all()
+noticeData = Noticeboard.objects.all()
 downloadsData = Downloads.objects.all()
 current_datetime = datetime.now()
 
@@ -54,6 +54,10 @@ def academics(request):
 
 def downloads(request):
     return render(request, 'downloads.html', context)
+
+
+def recruitment(request):
+    return render(request, 'recruitment.html', context)
 
 
 #==========search functionality==========#

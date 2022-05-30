@@ -9,7 +9,7 @@
                     <tbody>
                     {% for notice in noticeData %}
                       <tr>
-                        <th scope="row"><img src="{% static 'assets/newss.gif' %}" alt="News"><a href="{{notice.noticeFile.url}}">{{notice.noticeTitle}}</a></th>
+                        <td scope="row"><img src="{% static 'assets/newss.gif' %}" alt="News"><a href="{{notice.noticeFile.url}}">{{notice.noticeTitle}}</a></td>
                         <td>{{notice.noticeTime}}</td>
                       </tr>
                     {% endfor %}
